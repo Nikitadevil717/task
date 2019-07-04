@@ -1,0 +1,56 @@
+.navigation {
+	position: relative;
+
+	&__list {
+		display: flex;
+
+		@include MQ(M) {
+			flex-direction: column;
+			margin-bottom: 3rem;
+		}
+	}
+
+	#magic-line {
+		position: absolute;
+		bottom: -4.4rem;
+		left: 0;
+		width: 100px;
+		height: 2.2rem;
+		background: $c-white;
+
+		@include MQ(M) {
+			display: none;
+		}
+	}
+
+	&__item {
+		padding: 1rem 3.5rem;
+
+		@include MQ(XXL) {
+			padding: 1rem 2rem;
+		}
+
+		@include MQ(XL) {
+			padding: 1rem;
+		}
+
+		@include MQ(M) {
+			padding: 0;
+			margin-bottom: 1.5rem;
+			text-align: center;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+		
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

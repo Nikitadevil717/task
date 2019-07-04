@@ -1,0 +1,20 @@
+.wysiwyg {
+	font-size: 2rem;
+
+	@include MQ(XXL) {
+		font-size: 1.6rem;
+		line-height: 1.2;
+	}
+
+	@include MQ(XL) {
+		font-size: 1.4rem;
+	}
+
+	@include MQ(M) {
+		font-size: 1.5rem;
+	}
+
+	span {
+		font-family: $black-font;
+	}
+}

@@ -1,0 +1,40 @@
+// breakpoints
+   
+$XS:        512px;   
+$S:         767px;
+$L-touch:   1024px;   
+$M:         992px;    
+$L:         1200px; 
+$XL:        1400px;
+$XXL:        1700px;
+$XXS:       350px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == XXS {
+   @media only screen and (max-width: $XXS) { @content; } 
+  }
+  @else if $canvas == XS {
+   @media only screen and (max-width: $XS) { @content; } 
+  }
+  @else if $canvas == S {
+   @media only screen and (max-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (max-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (max-width: $L) { @content; } 
+  }
+  @else if $canvas == L-touch {
+   @media only screen and (max-width: $L-touch) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (max-width: $XL) { @content; } 
+  }
+  @else if $canvas == XXL {
+   @media only screen and (max-width: $XXL) { @content; } 
+  }
+}
+

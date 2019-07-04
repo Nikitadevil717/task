@@ -1,0 +1,177 @@
+.details {
+	display: flex;
+	padding: 13rem 6rem 20rem 13rem;
+
+	@include MQ(XL) {
+		padding: 10rem 3rem;
+	}
+
+	@include MQ(M) {
+		flex-direction: column;
+		padding: 5rem 2rem;
+	}
+
+	&__text {
+
+		&.view-small {
+			font-size: 2rem;
+
+			@include MQ(XXL) {
+				font-size: 1.6rem;
+				line-height: 1.2;
+			}
+
+			@include MQ(XL) {
+				font-size: 1.4rem;
+			}
+
+			@include MQ(M) {
+				font-size: 1.5rem;
+			}
+		}
+
+		&-bold {
+			font-family: $black-font;
+		}
+	}
+
+	&__img {
+		animation: img-show .5s .5s linear forwards;
+		opacity: 0;
+
+		@include MQ(XL) {
+			padding-right: 2rem;
+		}
+
+		@include MQ(M) {
+			margin-bottom: 6rem;
+			padding-right: 0;
+		}
+
+		.wysiwyg {
+			margin-left: 8rem;
+
+			@include MQ(XXL) {
+				margin-left: 3rem;
+			}
+
+			@include MQ(M) {
+				margin-left: 1.5rem;
+			}
+		}
+
+		&-block {
+
+			@include MQ(M) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		@keyframes img-show {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+	}
+
+	&__content {
+
+		.wysiwyg {
+			margin-bottom: 10rem;
+
+			@include MQ(XL) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&-title {
+			opacity: 0;
+			animation: title-show .5s .7s linear forwards;
+		}
+
+		@keyframes title-show {
+			from {
+				opacity: 0;
+				transform: translateY(-2rem);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&-advantages {
+
+		&__block {
+			display: flex;
+			align-items: center;
+			margin-bottom: 8rem;
+			animation: block-show .5s forwards;
+			opacity: 0;
+
+			@include MQ(XL) {
+				margin-bottom: 3rem;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@for $i from 0 to 2 {
+				&:nth-child(#{$i + 1}) {
+					animation-delay: 1.2s + ($i * .3);
+				}
+			}
+		}
+
+		@keyframes block-show {
+			from {
+				opacity: 0;
+				transform: translateX(4rem);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		&__icon {
+			display: block;
+			flex-shrink: 0;
+			width: 11.5rem;
+			height: 14.4rem;
+			background-position: center center;
+			background-repeat: no-repeat;
+			margin-right: 4rem;
+
+			@include MQ(XXL) {
+				width: 8rem;
+				background-size: 100%;
+			}
+
+			@include MQ(XL) {
+				margin-right: 2rem;
+				height: 12rem;
+			}
+
+			@include MQ(M) {
+				margin-right: 4rem;
+				width: 7rem;
+				height: 10rem;
+			}
+
+			&.icon-1 {
+				background-image: url(../img/icon-1.png);
+			}
+
+			&.icon-2 {
+				background-image: url(../img/icon-2.png);
+			}
+		}
+	}
+}

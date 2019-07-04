@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+	head
+		title example
+		meta(charset="UTF-8")
+		meta(name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0")
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="css/style.css")
+	body
+		include includes/header.pug
+		article.article
+			.details
+				.details__img
+					.details__img-block
+						img.details__img-element(src="img/product.png", alt="#")
+					.wysiwyg
+						p
+							span Регидрон Био – 
+							| современное комбинированное средство 
+							span для детей от трёх лет 
+							| или с массой тела от 12 кг, для устранения и профилактики обезвоживания и облегчения диареи и рвоты 
+				.details__content
+					.details__content-title
+						h1.title комплексное решение при детской диарее
+						.wysiwyg
+							p гипоосмолярный глюкозо-солевой раствор
+								br
+								| + лактобактерии LGG
+					.details-advantages
+						.details-advantages__block
+							.details-advantages__icon.icon-1
+							p.details-advantages__text сокращает
+								br
+								| продолжительность 
+								br
+								| и выраженность диареи
+						.details-advantages__block
+							.details-advantages__icon.icon-2
+							p.details-advantages__text восстанавливает
+								br
+								| водно-солевой 
+								br
+								| баланс
+		
+
+
+
+		script(type="text/javascript", src="https://code.jquery.com/jquery-2.2.4.min.js")
+		script(src="js/index.js")
+		
