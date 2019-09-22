@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>example</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../fonts/roboto_light_macroman/stylesheet.css" type="text/css" charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  </head>
+  <body>
+    <div class="burger">
+      <div></div>
+    </div>
+    <header>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#profile">Личная информация</a></li>
+          <li><a href="#skills">Опыт</a></li>
+          <li><a href="#js_experience">Javascript</a></li>
+          <li><a href="#about">О себе</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <section id="profile">
+        <h1>Анкета</h1>
+        <div class="block_name"><img src="img/icon_1.png" alt="#">
+          <h2>Личная информация</h2>
+        </div>
+        <div class="form_container">
+          <form action="#">
+            <fieldset>
+              <input type="text">
+              <label>ФИО</label>
+            </fieldset>
+            <select data-placeholder="Год рождения" id="yearDropdown">
+              <option></option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1988">1988</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+            </select>
+            <fieldset>
+              <input type="text">
+              <label>Место проживания</label>
+            </fieldset>
+            <fieldset>
+              <input type="text">
+              <label>Skype</label>
+            </fieldset>
+            <fieldset>
+              <input type="email">
+              <label>E-mail</label>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="block_name"><img src="img/icon_2.png" alt="#">
+          <h2>Расскажите о своём опыте</h2>
+        </div>
+        <div class="list_ofSkills">
+          <ul>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;1&quot;">
+                        <label for="&quot;1&quot;"></label>
+                        <p>БЭМ/OOCSS</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;2&quot;">
+                        <label for="&quot;2&quot;"></label>
+                        <p>Stylus/LESS/SASS</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;3&quot;">
+                        <label for="&quot;3&quot;"></label>
+                        <p>Работаю с SVG</p>
+                      </li>
+          </ul>
+          <ul>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;4&quot;">
+                        <label for="&quot;4&quot;"></label>
+                        <p>Верстаю семантично</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;5&quot;">
+                        <label for="&quot;5&quot;"></label>
+                        <p>ES2015/ES2016</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;6&quot;">
+                        <label for="&quot;6&quot;"></label>
+                        <p>Gulp/GRUNT</p>
+                      </li>
+          </ul>
+          <ul>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;7&quot;">
+                        <label for="&quot;7&quot;"></label>
+                        <p>Webpack</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;8&quot;">
+                        <label for="&quot;8&quot;"></label>
+                        <p>jQuery</p>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check" id="&quot;9&quot;">
+                        <label for="&quot;9&quot;"></label>
+                        <p>Использую Git</p>
+                      </li>
+          </ul>
+        </div>
+      </section>
+      <section id="js_experience">
+        <div class="block_name"><img src="img/icon_3.png" alt="#">
+          <h2>Уровень владения JavaScript</h2>
+        </div>
+        <div class="slider">
+          <p>Не владею</p>
+          <p>Использую готовые решения</p>
+          <p>Использую Готовые решения и умею их переделывать</p>
+          <p>Пишу сложный JS с нулю</p>
+          <div class="slider_line">
+            <div class="slider_line-active"></div>
+            <div class="slider_circle"></div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="block_name"><img src="img/icon_4.png" alt="#">
+          <h2>Расскажите о себе</h2>
+          <p>Напишите несколько предложенийб чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+        </div>
+        <textarea placeholder="Понравилась тем, что..."></textarea>
+        <div class="button_block">
+          <button>Готово</button>
+        </div>
+      </section>
+    </article>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.4/jquery.formstyler.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

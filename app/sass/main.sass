@@ -1,0 +1,584 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto')
+
+@font-face
+	font-family: 'robotoRegular';
+	src: url('../fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+
+@font-face
+	font-family: 'robotoLight';
+	src: url('../fonts/Roboto-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+
+@font-face
+	font-family: 'robotoThin';
+	src: url('../fonts/Roboto-Thin.ttf');
+	font-weight: normal;
+	font-style: normal;
+
+
+
+*, *:after, *:before
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+a
+	text-decoration: none
+
+ul
+	list-style: none
+
+select
+	display: none
+
+body
+	font-family: 'robotoRegular'
+	user-select: none
+	nav, section
+		max-width: 768px
+		margin: 0 auto
+		font-weight: 400
+	header
+		z-index: 101
+		position: fixed
+		background: #fff
+		width: 100%
+		top: 0
+		&:after
+			content: ''
+			display: block
+			width: 0%
+			transition: .6s
+			height: 4px
+			background: #50649a
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+		&.active
+			&:after
+				width: 100%
+.navigation, .form_container form
+	display: flex
+	justify-content: center
+	align-items: center
+.navigation
+	li
+		display: inline-block
+		margin: 21.5px 22.5px
+		font-weight: 400
+		cursor: pointer
+		font-size: 14px
+		position: relative
+		transition: .5s
+		font-family: 'robotoLight'
+		&:hover
+			color: #000
+		&:before, &:after, & a:before, & a:after
+			content: ''
+			display: block
+			position: absolute
+			width: 0
+			height: 1px
+			background: #50b39c
+			transition: .5s
+			left: 50%
+			transform: translate(-50%, -50%)
+		&:hover:after, &:hover:before
+			width: 100%
+		a
+			display: block
+			padding: 10px 15px
+			color: #50649a
+			&:hover
+				color: #000
+			&:before, &:after
+				left: 0
+				top: 50%
+				height: 0%
+				width: 1px
+				transition: .5s
+			&:after
+				left: 100%
+		&:hover a:before, &:hover a:after
+				height: 100%
+
+article
+	position: relative
+	margin-top: 80px
+	&:after, &:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 400px
+		top: 0
+		left: 0
+		z-index: -1
+		background: linear-gradient( to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(255,255,255,1) 48%, rgba(255,255,255,1) 90%)
+	&:before
+		background: url(../img/ian-froome-375650.jpg) no-repeat
+		background-size: cover
+		height: 300px
+	h1
+		font-size: 70px
+		text-align: center
+		padding: 135px 0 75px
+		font-weight: 100
+		font-family: 'robotoThin'
+	.block_name
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		margin-bottom: 50px
+		img
+			margin-bottom: 35px
+		h2
+			font-weight: 300
+			font-size: 30px
+			font-family: 'robotoLight'
+	.form_container
+		form
+			flex-direction: column
+			fieldset
+				border: none
+				position: relative
+				margin-bottom: 25px
+			input, .jq-selectbox__select
+				height: 60px
+				border: 1px solid #cecece
+				color: #cecece
+				border-radius: 4px
+				font-size: 23px
+				font-weight: 400
+				outline: none
+			label
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				font-size: 23px
+				font-weight: 400
+				color: #cecece
+				transition: .3s
+				pointer-events: none
+			input
+				width: 520px
+				text-align: center
+				color: #000
+				font-size: 20px
+				transition: .3s
+				padding: 15px 0 0
+				&::-ms-clear
+					display: none
+				&:focus
+					border-color: #435993
+				&:focus + label, &.valid + label
+					font-size: 14px
+					top: 25%
+.jq-selectbox
+	width: 320px
+	cursor: pointer
+	position: relative
+	margin-bottom: 35px
+	&:after, &:before
+		content: ''
+		display: block
+		height: 9px
+		width: 2px
+		background: #5c6fa1
+		position: absolute
+		top: 50%
+		left: 90%
+		transform-origin: bottom
+		transition: .5s
+	&:after
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&:before
+		transform: translate(-50%, -50%) rotate(45deg)
+	&.changed
+		.jq-selectbox__select-text
+			color: #000
+			font-size: 20px
+	&.opened
+		&:after
+			transform: translate(-50%, -150%) rotate(135deg)
+		&:before
+			transform: translate(-50%, -150%) rotate(-135deg)
+	.jq-selectbox__select
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+		margin: 0!important
+		,&-text, &-text.placeholder
+			text-align: center
+			width: 100%!important
+	.jq-selectbox__dropdown
+		height: 323px!important
+		overflow-y: auto
+		width: 100%
+		border: 1px solid #cecece
+		border-radius: 4px
+		position: absolute
+		background: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute!important
+		top: 100%!important
+		ul
+			width: 98%
+			max-height: 100%!important
+			&::-webkit-scrollbar
+				border-radius: 50%
+				width: 4px
+			&::-webkit-scrollbar-thumb
+				border-radius: 10px
+				width: 5px
+				background: #cecece
+			li
+				text-align: center
+				padding: 10px 0
+				font-weight: 300
+				font-size: 20px
+				color: #5c6fa1
+
+#skills
+	padding-top: 75px
+	.list_ofSkills
+		display: flex
+		justify-content: space-between
+		align-items: center
+	ul
+		margin: 
+		li
+			display: flex
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+			input
+				display: none
+			label
+				display: flex
+				border-radius: 4px
+				width: 20px
+				height: 20px
+				border: 1px solid #435993
+				outline: none
+				cursor: pointer
+				position: relative
+				margin-right: 13px
+				justify-content: center
+				align-items: center
+				transition: .5s
+				font-family: 'robotoLight'
+				&:hover
+					background: #e9efff
+				&:after
+					content: ''
+					width: 100%
+					height: 100%
+					background-image: url(../img/checkbox_active.png)
+					opacity: 0
+					display: block
+					background-position: -1px -1px
+					z-index: 10
+			input:checked + label
+				background: rgba(67,89,147,1)
+				&:after
+					opacity: 1
+			p
+				font-weight: 300
+				font-size: 16px
+#js_experience
+	padding-top: 135px
+	.slider
+		font-family: 'robotoLight'
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		flex-wrap: wrap
+		padding: 0 0 30px
+		p
+			display: inline-block
+			font-size: 13px
+			font-weight: 300
+			margin-left: 80px
+			position: relative
+			padding-bottom: 3px
+			&:after
+				content: ''
+				display block
+				height: 25px
+				width: 5px
+				position: absolute
+				top: 100%
+				left: 0
+				border-left: 1px dotted #b3b3b3
+			&:first-child
+				margin-left: 0
+			&:nth-child(2)
+				width: 125px
+			&:nth-child(3)
+				width: 180px
+			&:nth-child(4)
+				&:after
+					left: 99%
+		.slider_line
+			width: 100%
+			height: 14px
+			position: relative
+			margin-top: 15px
+			background: url(../img/slider.png)
+			background-size: cover
+			.slider_line-active
+				width: 0%
+				position: absolute
+				height: 100%
+				background: url(../img/slider_active.png)
+				background-size: cover
+			.slider_circle
+				background: url(../img/slider_circle.png)
+				position: absolute
+				width: 22px
+				height: 25px
+				top: 103%
+				left: 0%
+				cursor: pointer
+				transform: translateX(-50%)
+#about
+	padding-top: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	h2
+		margin-bottom: 20px
+	p
+		font-size: 16px
+		font-weight: 300
+		width: 66%
+		text-align: center
+		font-family: 'robotoLight'
+	textarea
+		height: 180px
+		width: 100%
+		font-family: 'Roboto', arial, sans-serif
+		font-size: 20px
+		padding: 20px 25px
+		color: #cecece
+		outline: none
+		border: 2px solid #e8e8e8
+		border-radius: 4px
+		resize: none
+		overflow: auto
+		&::-webkit-input-placeholder
+			outline: none
+			shadow-box: none
+			color: #cecece
+			overflow-y: auto
+			transition: .3s
+		&::-moz-placeholder
+			opacity: 1
+			transition: .3s
+		&:focus::-webkit-input-placeholder
+			opacity: 0
+		&:focus::-moz-placeholder
+			opacity: 0
+	.button_block
+		position: relative
+		margin: 75px 0
+		width: 115px
+		height: 50px
+		border-radius: 5px
+		border: none
+		outline: none
+		font-size: 16px
+		font-weight: 300
+		background: #435993
+		color: #fff
+		overflow: hidden
+		cursor: pointer
+		button
+			width: 100%
+			height: 100%
+			border: none
+			outline: none
+			font-size: 16px
+			font-weight: 300
+			background: transparent
+			color: #fff
+			cursor: pointer
+			position: relative
+			z-index: 5
+		&:after, &:before
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 100%
+			background: #50b39c
+			left: 0
+			z-index: 1
+		&:before
+			top: -100%
+			transition: 0s
+		&:after
+			top: 100%
+			transition: .3s 0s
+		&:hover
+			color: #fff
+		&:hover:before, &:hover:after
+			top: 0
+		&:hover:before
+			transition: .3s 0s
+		&:hover:after
+			transition: 0s .3s
+
+@media screen and (max-width: 800px)
+	.list_ofSkills
+		margin-left: 15px
+		margin-right: 15px
+	#about textarea
+		width: 90%
+	#js_experience .slider
+		padding: 0 15px 0
+		p
+			margin-left: 0px
+
+@media screen and (max-width: 767px)
+	body
+		-webkit-text-stroke: .5px
+		&.active
+			overflow: hidden
+		.burger
+			width: 30px
+			height: 30px
+			position: fixed
+			top: 5%
+			right: 5%
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			z-index: 102
+			div
+				width: 100%
+				height: 4px
+				background: rgba(80,179, 156, 1)
+				transition: .5s
+				border: 1px solid rgba(255,255,255,.5)
+				&:before, &:after
+					position: absolute
+					content: ''
+					display: block
+					top: 2px
+					width: 100%
+					left: 50%
+					transform: translateX(-50%)rotate(0)
+					height: 4px
+					background: #50b39c
+					border: 1px solid rgba(255,255,255,.5)
+					transform-origin: right
+					transition: .5s
+				&:after
+					top: 23px
+					transform: translateX(-50%)rotate(0)
+			&.active div
+				background: rgba(80,179, 156, 0)
+				&:before
+					transform: translateX(-50%) rotate(-44deg)
+					border: 1px solid rgba(255,255,255,0)
+				&:after
+					transform: translateX(-50%) rotate(43deg)
+					border: 1px solid rgba(255,255,255,0)
+			&.active + header
+				transform: translateY(0%)
+		header, .navigation, .navigation ul
+			width: 100%
+			height: 100%
+			display: block
+		header
+			transform: translateY(-100%)
+			transition: .5s
+			&:after
+				display: none
+			.navigation
+				ul
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+				li
+					height: 10%
+					width: 90%
+					display: block
+					margin: 0
+					a
+						width: 100%
+						height: 100%
+						display: flex
+						justify-content: center
+						align-items: center
+						font-size: 1.5rem
+	.jq-selectbox.changed .jq-selectbox__select-text
+		font-size: 15px
+	.jq-selectbox .jq-selectbox__dropdown ul li
+		font-size: 18px
+	article
+		margin: 0
+		#skills, #profile h1, #js_experience, #about
+			padding-top: 75px
+		.block_name
+			h2
+				font-size: 22px
+				text-align: center
+		.form_container 
+			form 
+				fieldset
+					width: 90%
+				input
+					width: 100%
+					height: 40px
+					font-size: 15px
+					&:focus
+						border-color: #435993
+					&:focus + label, &.valid + label
+						font-size: 12px
+						top: 25%
+				label
+					font-size: 15px
+				.jq-selectbox__select
+					height: 40px
+					font-size: 15px
+		.jq-selectbox
+			width: 90%
+			height: 40px
+		.list_ofSkills
+			flex-direction: column
+			ul
+				width: 205px
+				margin-bottom: 20px
+		#js_experience
+			width: 100%
+			.slider 
+				padding: 0 15px 30px
+				p
+					margin: 0
+					&:nth-child(2), &:nth-child(3)
+						display: none
+					&:nth-child(4)
+						margin-right: 0%
+		#about
+			textarea
+				width: 90%
+				font-size: 15px
+
+
+
+
