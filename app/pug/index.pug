@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+	head
+		title example
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1")
+		link(rel="stylesheet" href="../fonts/roboto_light_macroman/stylesheet.css" type="text/css" charset="utf-8")
+		link(rel="stylesheet", href="css/style.css")
+		
+	body
+		.burger
+			div
+		header
+			nav.navigation
+				ul
+					li
+						a(href="#profile") Личная информация
+					li
+						a(href="#skills") Опыт
+					li
+						a(href="#js_experience") JavaScript
+					li
+						a(href="#about") О себе
+		article
+			section#profile
+				h1 Анкета
+				.block_name
+					img(src="img/icon_1.png", alt="#")
+					h2 Личная информация
+				.form_container
+					form(action="#")
+						fieldset
+							input(type="text")
+							label ФИО
+						- var n = 2000;
+						select(data-placeholder="Год рождения")#yearDropdown
+							option
+							while n > 1985
+								option(value=''+n+'')= n--
+						fieldset
+							input(type="text")
+							label Место проживания
+						fieldset
+							input(type="text")
+							label Skype
+						fieldset
+							input(type="email")
+							label E-mail
+			section#skills
+				.block_name
+					img(src="img/icon_2.png", alt="#")
+					h2 Расскажите о своем опыте
+				.list_ofSkills
+					mixin skill(name, namber)
+						li
+							input(type="checkbox" name="check" id='"'+namber+'"')
+							label(for='"'+namber+'"')
+							p= name
+					ul
+						+skill('БЭМ/OOCSS', '1')
+						+skill('Stylus/LESS/SASS', '2')
+						+skill('Работаю с SVG', '3')
+					ul
+						+skill('Верстаю семантично', '4')
+						+skill('ES2015/ES2016', '5')
+						+skill('Gulp/GRUNT', '6')
+					ul
+						+skill('Webpack', '7')
+						+skill('jQuery', '8')
+						+skill('Использую Git', '9')
+			section#js_experience
+				.block_name
+					img(src="img/icon_3.png", alt="#")
+					h2 Уровень владения JavaScript
+				.slider
+					p Не владею
+					p Использую готовые решения
+					p Использую готовые решения и умею и переделывать
+					p Пишу сложный JS с нуля
+					.slider_line
+						.slider_line-active
+						.slider_circle
+			section#about
+				.block_name
+					img(src="img/icon_4.png", alt="#")
+					h2 Расскажите о себе
+					p Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+				textarea(placeholder="Понравилась тем, что...")
+				div.button_block
+					button Готово
+
+
+		
+
+
+		
+
+		script(type="text/javascript", src="https://code.jquery.com/jquery-2.2.4.min.js")
+		script(type="text/javascript", src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.4/jquery.formstyler.min.js")
+		script(type="text/javascript", src="js/index.js")
