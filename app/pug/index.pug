@@ -3,9 +3,10 @@ html(lang="en")
 	head
 		title example
 		meta(charset="UTF-8")
-		link(rel="stylesheet", href="css/main.css")
-		link(rel="stylesheet" href="../fonts/roboto_light_macroman/stylesheet.css" type="text/css" charset="utf-8")
 		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1")
+		link(rel="stylesheet" href="../fonts/roboto_light_macroman/stylesheet.css" type="text/css" charset="utf-8")
+		link(rel="stylesheet", href="css/style.css")
+		
 	body
 		.burger
 			div
@@ -17,7 +18,7 @@ html(lang="en")
 					li
 						a(href="#skills") Опыт
 					li
-						a(href="#js_experience") Jacascript
+						a(href="#js_experience") JavaScript
 					li
 						a(href="#about") О себе
 		article
@@ -48,7 +49,7 @@ html(lang="en")
 			section#skills
 				.block_name
 					img(src="img/icon_2.png", alt="#")
-					h2 Расскажите о своём опыте
+					h2 Расскажите о своем опыте
 				.list_ofSkills
 					mixin skill(name, namber)
 						li
@@ -70,12 +71,12 @@ html(lang="en")
 			section#js_experience
 				.block_name
 					img(src="img/icon_3.png", alt="#")
-					h2 Уровень владения JavaCript
+					h2 Уровень владения JavaScript
 				.slider
 					p Не владею
 					p Использую готовые решения
-					p Использую Готовые решения и умею их переделывать
-					p Пишу сложный JS с нулю
+					p Использую готовые решения и умею и переделывать
+					p Пишу сложный JS с нуля
 					.slider_line
 						.slider_line-active
 						.slider_circle
@@ -83,7 +84,7 @@ html(lang="en")
 				.block_name
 					img(src="img/icon_4.png", alt="#")
 					h2 Расскажите о себе
-					p Напишите несколько предложенийб чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+					p Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
 				textarea(placeholder="Понравилась тем, что...")
 				div.button_block
 					button Готово
