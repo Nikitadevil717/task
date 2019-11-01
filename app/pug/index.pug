@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+	include includes/head.pug
+
+	
+
+
+	body
+
+		mixin slide-block(title, img)
+			.slide__block
+				.slide__content(style="background-image: url(images/bg_0"+img+".jpg)")
+					h2.title.view-middle= title
+
+		article.article
+			.container
+				h1.title Excel in Academic Writing with Our Guides
+				.slider__container
+						+slide-block('Study Abroad Stress: The Complete Guide for International Students', '1')
+						+slide-block('Good GPA—Why Do You Need It & How To Improve It', '2')
+						+slide-block('How to Prevent Unintentional Plagiarism', '3')
+						+slide-block('How to Study Effectively: 11 Tricks to Save Time Studying', '4')
+						+slide-block('A Complete Guide to Essay Writing—Make it Simple', '5')
+						+slide-block('12 Affordable Places You Must Visit on Student Holidays this Year', '6')
+
+						+slide-block('Study Abroad Stress: The Complete Guide for International Students', '1')
+						+slide-block('Good GPA—Why Do You Need It & How To Improve It', '2')
+						+slide-block('How to Prevent Unintentional Plagiarism', '3')
+						+slide-block('How to Study Effectively: 11 Tricks to Save Time Studying', '4')
+						+slide-block('A Complete Guide to Essay Writing—Make it Simple', '5')
+						+slide-block('12 Affordable Places You Must Visit on Student Holidays this Year', '6')
+
+						+slide-block('Study Abroad Stress: The Complete Guide for International Students', '1')
+						+slide-block('Good GPA—Why Do You Need It & How To Improve It', '2')
+						+slide-block('How to Prevent Unintentional Plagiarism', '3')
+						+slide-block('How to Study Effectively: 11 Tricks to Save Time Studying', '4')
+						+slide-block('A Complete Guide to Essay Writing—Make it Simple', '5')
+						+slide-block('12 Affordable Places You Must Visit on Student Holidays this Year', '6')
+
+	include includes/scripts.pug
+
+

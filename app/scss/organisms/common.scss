@@ -1,0 +1,100 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a, a:hover, a:active, a:focus {
+	text-decoration: none;
+	transition: .3s;
+}
+
+p {
+	margin: 0;
+	line-height: 2.8rem;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+button {
+	padding: 0;
+	outline: none;
+	border: none;
+	transition: .3s;
+	cursor: pointer;
+
+	&:active {
+		outline: none;
+	}
+}
+
+input, textarea {
+	outline: none;
+	-webkit-appearance: none;
+}
+
+input[type='checkbox'] {
+	width: 0;
+	height: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+button:focus {
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	user-select: none;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	background-color: #E8E8E8;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+
+	&::before {
+		content: 'desktop';
+		display: none;
+	}
+
+	&.active {
+		overflow: hidden;
+	}
+}
+
+
+.article {
+	flex-grow: 1;
+}

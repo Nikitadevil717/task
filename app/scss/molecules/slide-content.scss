@@ -1,0 +1,36 @@
+.slick-slide {
+	outline: none;
+}
+
+.slide__content {
+	background: gray;
+	height: 35.2rem;
+	margin: 16px;
+	border-radius: .8rem;
+	box-shadow: 0 3rem 2rem -1.5rem rgba(#00645B, .3);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	transition: .3s;
+	cursor: pointer;
+
+	@media (hover) {
+		&:hover {
+			box-shadow: 0 3rem 2rem -1.5rem rgba(#642A00, .3);
+
+			.title {
+				transform: translateY(-1rem);
+			}
+		}
+	}
+
+	@include MQ(L) {
+		height: 32.8rem;
+	}
+
+	@include MQ(S) {
+		margin: 8px;
+		height: calc(100vw - 3.77rem - 10vw);
+	}
+}
