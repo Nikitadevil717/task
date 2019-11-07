@@ -1,1 +1,0 @@
-"use strict";$(".slider__container").slick({slidesPerRow:3,rows:2,dots:!0,responsive:[{breakpoint:1201,settings:{slidesPerRow:2}},{breakpoint:768,settings:{slidesPerRow:1,rows:1,arrow:!1,infinite:!1}}]});
