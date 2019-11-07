@@ -1,0 +1,119 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.grid-field {
+	margin: 40px auto;
+	font: normal 16px/16px arial, sans-serif;
+
+	@media only screen and (max-width: 992px) {
+		& {
+			font-size: 8px;
+			line-height: 10px;
+		}
+	}
+}
+
+#block-1,
+#block-2 {
+	width: 100%;
+}
+
+#block-1 {
+	max-width: 1000px;
+
+	.react-grid-layout {
+		height: 200px!important;
+	}
+
+	.remove {
+		// display: none;
+	}
+
+	.amount {
+		display: flex;
+	}
+}
+
+#block-2 {
+	max-width: 600px;
+	height: 400px;
+	overflow: hidden;
+
+	.react-grid-layout {
+		min-height: 400px;
+	}
+
+	&.hidden {
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	.react-grid-item > .text {
+		pointer-events: none;
+	}
+	
+}
+
+.react-grid-layout {
+	background: #a6a6a6;
+}
+
+.react-grid-item {
+	background: white;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.react-resizable-handle {
+	display: none;
+}
+
+.text {
+	text-align: center;
+}
+
+.amount {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 25px;
+	height: 25px;
+	background: gray;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	color: white;
+
+	@media only screen and (max-width: 992px) {
+
+		& {
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 10px;
+		}
+		
+	}
+}
+
+.remove {
+	position: absolute;
+	right: 2px;
+	top: 0;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.droppable-element {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+.hiddenItem {
+	display: none;
+}
