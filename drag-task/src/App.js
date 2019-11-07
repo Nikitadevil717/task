@@ -348,8 +348,8 @@ export default class AddRemoveLayout extends React.PureComponent {
             {_.map(this.state.items, el => this.createElement(el))}
           </ResponsiveReactGridLayout>
         </div>
+        <p className="items2__counter">колличество блоков {this.state.items2.length}</p>
         <div className="grid-field" id="block-2">
-          <p>колличество блоков {this.state.items2.length}</p>
           <ResponsiveReactGridLayout
             onLayoutChange={this.onLayoutChange}
             onBreakpointChange={this.onBreakpointChange}
