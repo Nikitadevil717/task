@@ -12,15 +12,11 @@ export default class Numbers extends React.Component{
   }
 
   render() {
-    let buttonElements = [];
-    for(let value of this.state.buttons){
-      buttonElements.push(
-        <Button key={ _.uniqueId()} label={value} onClick={this.props.onClick}/>
-      );
-    }
     return (
       <div id="numbers">
-        {buttonElements}
+        {this.state.buttons.map((item) => (
+          <Button key={ _.uniqueId()} className={'class'+item} label={item} onClick={this.props.onClick}/>
+        ))}
         <Button label="=" onClick={this.props.onClickTotal} className="greenBtn"/>
       </div>
     );
