@@ -29,7 +29,9 @@ class Container extends React.Component{
     let operators = ['+', '-', '/', 'x'];
     let display;
 
-    if(label === '.' && this.state.display.toString().match(/[.]+\d+/)) {
+    let displayString = this.state.display.toString();
+
+    if(label === '.' && (displayString.match(/[.]+\d+/) || displayString.match(/[.*]/))) {
       return false;
     }
 
