@@ -1,0 +1,67 @@
+body, div, section, a, span, p, button, input {
+  font: normal 18px/18px 'Roboto', sans-serif;
+  line-height: 1;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+button {
+  cursor: pointer;
+}
+#container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 10px;
+}
+#display {
+  margin: 5px;
+  text-align: right;
+  padding: 30px 15px;
+  border: 2px solid black;
+  position: relative;
+  padding-left: calc(10px + 22px + 10px);
+}
+#display .clean {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 19px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+#inputs {
+  display: flex;
+}
+#numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 75% 0 0;
+}
+#operations {
+  display: grid;
+  flex: 25% 0 0;
+}
+.defaultButton {
+  border: 2px solid #E0E0E0;
+  margin: 5px;
+  width: calc(100% - 10px);
+  padding: 22% 0;
+  text-align: center;
+  background: transparent;
+  outline: none;
+}
+#numbers .defaultButton {
+  border: 2px solid #97b1cb;
+}
+#numbers .defaultButton.greenBtn {
+  border: 2px solid #5aa698;
+}
+#operations .defaultButton {
+  
+}
