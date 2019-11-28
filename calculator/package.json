@@ -133,6 +133,7 @@
     "lodash": "^4.17.15",
     "react-grid-layout": "^0.17.1",
     "react-sortablejs": "^1.5.1",
-    "sortablejs": "^1.10.1"
+    "sortablejs": "^1.10.1",
+    "styled-components": "^4.4.1"
   }
 }

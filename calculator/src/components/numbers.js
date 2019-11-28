@@ -1,7 +1,18 @@
 import React from 'react';
 import _ from "lodash";
+import styled from 'styled-components';
 
 import Button from './button.js';
+
+const Wrapper = styled.div `
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 75% 0 0;
+`;
+
+const ButtonGreen = styled(Button) `
+    border: 2px solid #5aa698;
+`;
 
 export default class Numbers extends React.Component{
   constructor(props) {
@@ -13,12 +24,12 @@ export default class Numbers extends React.Component{
 
   render() {
     return (
-      <div id="numbers">
+      <Wrapper id="numbers">
         {this.state.buttons.map((item) => (
           <Button key={ _.uniqueId()} className={'class'+item} label={item} onClick={this.props.onClick}/>
         ))}
-        <Button label="=" onClick={this.props.onClickTotal} className="greenBtn"/>
-      </div>
+        <ButtonGreen label="=" onClick={this.props.onClickTotal} className="greenBtn"/>
+      </Wrapper>
     );
   }
 };

@@ -1,10 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Inputs from './components/input.js';
 import Screen from './components/total.js';
 
-import './index.scss';
+// import './index.scss';
+
+const GlobalStyle = createGlobalStyle`
+  body, div, section, a, span, p, button, input {
+    font: normal 18px/18px 'Roboto', sans-serif;
+    line-height: 1;
+    box-sizing: border-box;
+    font-weight: 900;
+  }
+`;
+
+const Wrapper = styled.div `
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 10px;
+`;
 
 
 
@@ -129,10 +146,11 @@ class Container extends React.Component{
   }
   render() {
     return (
-      <div id="container">
+      <Wrapper id="container">
+        <GlobalStyle/>
         <Screen displayText={this.state.display} onClickClean={this.onClickClean}/>
         <Inputs onClicknumber={this.onClicknumber} onClickOperator={this.onClickOperator}/>
-      </div>
+      </Wrapper>
     );
   }
 };
